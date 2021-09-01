@@ -10,5 +10,7 @@ function compoundInterest(initialAmount, annualInterestRate, years) {
     let interst;
      interest = initialAmount * (1 + annualInterestRate / 100 / 12) ** (years * 12) -
       initialAmount;
-    return interst + initialAmount;
+    return interest + initialAmount;
   }
+  console.log(compoundInterest(100, 10, 1));
+console.log(compoundInterest(10000, 5, 10));
