@@ -7,7 +7,7 @@ return the sum of the interest and the initial value.
 
  */
 function compoundInterest(initialAmount, annualInterestRate, years) {
-    let interst;
+    let interest;
      interest = initialAmount * (1 + annualInterestRate / 100 / 12) ** (years * 12) -
       initialAmount;
     return interest + initialAmount;
