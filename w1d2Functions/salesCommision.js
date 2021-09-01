@@ -1,8 +1,8 @@
-function computeSalesCommision(isSalaried, salesAmount){
-    let commission;
+function computeSalesCommission(isSalaried, salesAmount){
+    let commission = 0;
     if (isSalaried === true ){
         if(salesAmount >= 300 && salesAmount <= 500){
-            commision = salesAmount*0.01;
+            commission = salesAmount*0.01;
 
         }if(salesAmount > 500){
             commission = salesAmount*0.02;
@@ -11,11 +11,14 @@ function computeSalesCommision(isSalaried, salesAmount){
             commission = 0;
         }
         
-    }else if(salesAmount >= 300 && salesAmount <= 500){
-        commision = salesAmount*0.02;
+    }else {
+        if(salesAmount >= 300 && salesAmount <= 500){
+            commission = salesAmount*0.02;
+        }if(salesAmount > 500){
+            commission = salesAmount*0.03;
+       
 
-    }if(salesAmount > 500){
-        commission = salesAmount*0.03;
+        }
 
     }
     return commission;
