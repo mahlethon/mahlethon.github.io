@@ -1,3 +1,12 @@
+/* input: cost 
+output : down payment
+process: use if else statements to calculate the down payment using the instructions:
+Cost of House                     Down Payment
+$0 to less than 50K             5% of the cost
+$50K to less than 100K         $2500 + 10% of (cost - $50K)
+$100K to less than 200K        $7500 + 15% of (cost - $100K)
+$200K and above                 $20000 + 10% of (cost - $200K)
+*/
 function calcDownpayment(cost){
     let downPayment;
     if(cost>=0 && cost<50000 ){
