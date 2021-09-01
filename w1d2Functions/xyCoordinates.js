@@ -1,9 +1,9 @@
-function calculateDistance(x1,y1,x2,y2){
+function calcDistance(x1,y1,x2,y2){
     let distance;
 let xdifferenceSquare = Math.pow((x2-x1),2);
 let yDifferenceSquare = Math.pow((y2-y1),2);
 let sum = xdifferenceSquare+yDifferenceSquare;
-distance = Math.pow(sum,2);
+distance = Math.sqrt(sum,2);
 return distance;
 
 }
