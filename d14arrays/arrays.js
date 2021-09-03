@@ -2,7 +2,7 @@
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser
 */ 
-module.exports = {maxOfThree, sum, multiply }; //add all of your function names here that you need for the node mocha tests
+//module.exports = {maxOfThree, sum, multiply }; //add all of your function names here that you need for the node mocha tests
 
 /**
  * 
@@ -82,4 +82,18 @@ function reverseArray(arr){
             report[i] = count;
         }
         return report;
+    }
+    function generateArray(num1, num2) {
+        let arr1 = [];
+        
+        for(let i =0; i< num1; i++){
+            let arr2 = [];
+            for(let j =0; j<num2; j++){
+                
+                arr2[j] = j+1;
+            }
+            arr1[i] = arr2;
+    
+        }
+        
     }
