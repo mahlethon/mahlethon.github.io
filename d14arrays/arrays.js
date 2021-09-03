@@ -75,7 +75,7 @@ function reverseArray(arr){
         for (let i =0; i<answers.length; i++){
             let count = 0;
             for(let j =0; j<answers[i].length; j++){
-                if(correctAnswers[j] === answers[j]){
+                if(correctAnswers[j] === answers[i][j]){
                     count++;
                 }
             }
@@ -84,16 +84,20 @@ function reverseArray(arr){
         return report;
     }
     function generateArray(num1, num2) {
-        let arr1 = [];
+        let arr = [];
+        let count = 1;
         
         for(let i =0; i< num1; i++){
-            let arr2 = [];
+            let subArr = [];
             for(let j =0; j<num2; j++){
                 
-                arr2[j] = j+1;
+                subArr[j] = count;
+                count++;
             }
-            arr1[i] = arr2;
+            arr[i] = subArr;
     
         }
+        return arr;
         
     }
+    
