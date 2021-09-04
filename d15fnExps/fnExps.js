@@ -41,6 +41,7 @@ function myMap(arr, func){
 console.log(myMap(testArray, double));
 console.log(myMap(testArray, times100));
 
-console.log(myMap(testArray, function (num){return num*3;} ));
-console.log(myMap(testArray,  num => num*3 ));
+console.log(myMap(testArray, function(num){return num*3;} ));
+
+console.log(myMap(testArray, num => num * 3 ));
 
