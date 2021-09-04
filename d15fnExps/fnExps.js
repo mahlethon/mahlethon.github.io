@@ -2,7 +2,7 @@
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser
 */ 
-module.exports = {double, times100, myMap }; //add all of your function names here that you need for the node mocha tests
+//module.exports = {double, times100, myMap }; //add all of your function names here that you need for the node mocha tests
 const assert = require("assert"); 
 /**
  * @param {number} num is a number
