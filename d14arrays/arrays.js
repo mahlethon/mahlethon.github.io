@@ -12,10 +12,16 @@
  * @returns {number} largest of a, b, c
  */
 function maxOfThree(a, b, c){ 
-    let largest;
- largest = (a > b) ? a: b;
- (largest > c) ? largest : c;
- return largest;
+    let max_value=0;
+    if(a>b){
+        max_value=a;
+    }else{
+        max_value=b;
+    }
+    if (c>max_value){
+       max_value=c;
+    }
+    return max_value;
 }
 
 /**
@@ -35,40 +41,80 @@ function sum(arr){
 /**
  * 
  * @param {Array} arr of numbers
- * @returns {number} sum of arr numbers
+ * @returns {number} product of arr numbers
  */
 function multiply(arr){
-    let tot = 1;
+    let product = 1;
 
     for (const number of arr){
-        tot += number;
+        product *= number;
     }
-    return tot;
+    return product;
 
 }
-function findLongestWords(words) {
+/**
+ * 
+ * @param {Array} arr of strings
+ * @returns {number} length of the longest word 
+ */
+function findLongestWord(words) {
     let longest = words[0];
     for(let i =0; i< words.length; i++){
         if(words[i].length > longest.length){
             longest = words[i];
-
         }
-
-
     }
     return longest.length;
-   
 }
+/**
+ * 
+ * @param {Array} arr array of elements of any type
+ * @returns {Array} a new array with the elements reversed
+ */
 
-function reverseArray(arr){
+function reverseArray(arr) {
     let newArr = [];
-    for(let i =0; i<arr.length; i++ ){
-    newArr.push (arr.pop);
+    
+    for(let i = arr.length-1; i>=0; i--){
+       
+       newArr.push(arr.pop());
+      
     }
     return newArr;
-    }
+    
+}
+
     console.log(reverseArray(["A", "B", "C"]));
 
+/**
+ * 
+ * @param {Array} arr of elements of any type
+ * @returns {Array} elements of arr modified to be in inversed positions
+ */
+
+    function reverseArrayInPlace(arr){
+        let temp;
+        let count = 0;
+        for(let i=arr.length-1; i>=0; i--){
+            temp = arr[i];
+            arr[i] = arr[count];
+            arr[count] = temp;
+            if (count === i && arr.length%2 !== 0 || count + 1 === i && arr.length%2 === 0){
+                break;
+            }
+            count++;
+        }
+        return arr;
+    }
+    console.log(reverseArrayInPlace([1,2,3,4,5]));
+
+    
+/**
+ * 
+ * @param {Array} answers is a multidimentional array of students' answers
+ * @param {Array} correctAnswers is an array of correct answers
+ * @returns {Array} array of count of correct answers of students
+ */
 
     function scoreExams (answers, correctAnswers){
         let report = [];
@@ -83,6 +129,14 @@ function reverseArray(arr){
         }
         return report;
     }
+
+/**
+ * 
+ * @param {number} num1 is a number
+ * @param {number} num2 is a number
+ * @returns {Array} a multidimentional array  
+ */
+
     function generateArray(num1, num2) {
         let arr = [];
         let count = 1;
