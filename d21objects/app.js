@@ -1,6 +1,6 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = {findTitles }; //add all of your function names here that you need for the node mocha tests
+//module.exports = {findTitles }; //add all of your function names here that you need for the node mocha tests
 
 
 let library = [
@@ -32,10 +32,31 @@ function showTitles() {
  * @return {object} array holding all titles as elements
  */
 function findTitles() {
+
     let titles = [];
-    titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
-    // implement this and other functions
+    for (let book of library){
+        titles.push(book.title);
+    }
+    titles.sort();
     return titles;
+}
+function findAuthors() {
+
+    let authors = [];
+    for (let book of library){
+        authors.push(book.author);
+    }
+    authors.sort();
+    return authors;
+}
+function findIds() {
+
+    let ids = [];
+    for (let book of library){
+        ids.push(book.libraryID);
+    }
+    ids.sort();
+    return ids;
 }
 
 /**
@@ -43,6 +64,21 @@ function findTitles() {
  * Event handler for Add book button.  Creates and adds book to the library
  */
 function addBook(){
-    const title = document.getElementById("title"); //retrieves the book title from the title textbox
+    
+    let title = document.getElementById("Book Title"); //retrieves the book title from the title textbox
     //finish the implementation -- get the author, create a book object, and add to the library array
+    let author = document.getElementById("Author");
+    let libraryId = document.getElementById("BookId");
+
+    let book = {
+        title: title,
+        author: author,
+        libraryId: libraryId
+
+    };
+
+    library.push(book);
+    return book;
 }
+
+
