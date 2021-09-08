@@ -10,11 +10,13 @@
  */
 function Accumulator(value1){
 //implement this
-this.value = 0;
-this.read = function() {
-value1 = +prompt("Enter your value :", "v?");
-this.value += startingValue;
-return this;
+function Accumulator(startingValue) {
+   this.value = startingValue;
+ 
+   this.read = function() {
+     this.value += +prompt('How much to add?', 0);
+   };
+ 
 };
 }
 
@@ -23,6 +25,18 @@ return this;
  */
  function Calculator() {
     //implement this
-     }
+    this.read = function() {
+      this.a = +prompt('a?', 0);
+      this.b = +prompt('b?', 0);
+    };
+  
+    this.sum = function() {
+      return this.a + this.b;
+    };
+  
+    this.mul = function() {
+      return this.a * this.b;
+   };
+}
 
 
