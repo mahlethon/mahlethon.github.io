@@ -1,21 +1,17 @@
 "use strict";
 
-const calculator = {
-    
-    
-};  // implement this
+const calculator = {};  // implement this
 calculator.read = function (){
-    let num1 = +prompt("a?", 0);
-    let num2 = +prompt("b?", 0);
-    this.a = num1;
-    this.b = num2;
+    this.a  = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+    
 }
-calculator.sum = function (a,b) {
-    return a+b;
+calculator.sum = function () {
+    return this.a + this.b;
 };
 
-calculator.mul = function  mul(a,b) {
-    return a*b;
+calculator.mul = function  mul() {
+    return this.a * this.b;
     
 };
 
