@@ -68,7 +68,7 @@ function findIDs() {
  //finish the implementation -- get the author, create a book object, and add to the library array
  let author = document.getElementById("Author");
  let libraryID = document.getElementById("library ID");
- //let libraryID = document.getElementById("library ID");
+ 
 
  
 function addBook(book){
