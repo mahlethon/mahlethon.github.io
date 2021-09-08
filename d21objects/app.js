@@ -44,7 +44,7 @@ function findAuthors() {
 
     let authors = [];
     for (let book of library){
-        authors.push(book["author"]);
+        authors.push(book.author);
     }
     authors.sort();
     return authors;
@@ -67,16 +67,16 @@ function findIDs() {
  let title = document.getElementById("Book Title"); //retrieves the book title from the title textbox
  //finish the implementation -- get the author, create a book object, and add to the library array
  let author = document.getElementById("Author");
+ let libraryID = document.getElementById("library ID");
  //let libraryID = document.getElementById("library ID");
 
  
 function addBook(book){
+    
      book.title = title;
      book.author = author;
      //book.libraryID = libraryID;
-
-    
-    library.push(book);
+     library.push(book);
     return book;
 }
 
