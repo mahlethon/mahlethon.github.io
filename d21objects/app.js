@@ -44,12 +44,12 @@ function findAuthors() {
 
     let authors = [];
     for (let book of library){
-        authors.push(book.author);
+        authors.push(book["author"]);
     }
     authors.sort();
     return authors;
 }
-function findIds() {
+function findIDs() {
 
     let ids = [];
     for (let book of library){
@@ -63,20 +63,19 @@ function findIds() {
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function addBook(){
+
+ let title = document.getElementById("Book Title"); //retrieves the book title from the title textbox
+ //finish the implementation -- get the author, create a book object, and add to the library array
+ let author = document.getElementById("Author");
+ //let libraryID = document.getElementById("library ID");
+
+ 
+function addBook(book){
+     book.title = title;
+     book.author = author;
+     //book.libraryID = libraryID;
+
     
-    let title = document.getElementById("Book Title"); //retrieves the book title from the title textbox
-    //finish the implementation -- get the author, create a book object, and add to the library array
-    let author = document.getElementById("Author");
-    let libraryId = document.getElementById("BookId");
-
-    let book = {
-        title: title,
-        author: author,
-        libraryId: libraryId
-
-    };
-
     library.push(book);
     return book;
 }
