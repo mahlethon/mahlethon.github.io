@@ -48,7 +48,7 @@ function getAverageAge(users){
   function groupById(array) {
     let newObj = {};
     for(obj of array){
-      newObj.obj.id = obj;
+      newObj[obj.id] = obj;
 
     }
     return newObj;
