@@ -3,8 +3,6 @@
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 //module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge}; //add all of your function names here that you need for the node mocha tests
 
-// let numArray = [5, 0, 7, 77, -20, 300, 51, 2];
- //let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
 
 function doubleNums(arr){
 return arr.map(num => num * 2);
@@ -46,24 +44,23 @@ return arr.includes(person => person.age > 10);
 }
 
 function findSum(arr){
-return arr.reduce((num, tot) => num + tot, 0);
+return arr.reduce((tot, num) => num + tot, 0);
 }
 
 function findAvg(arr){
-    return arr.reduce((num, tot) => (num + tot)/ arr.length, 0);
+    return arr.reduce((tot, num) => num + tot, 0)/arr.length;
 }
 
-function findAvg(arr){
-    return arr.reduce((num, max) => num>max , 0);
+function findMax(arr){
+    return arr.reduce((max, num) => num>max , 0);
 }
 
-function findAvg(arr){
-    return arr.reduce((person, max) => person.age>tot , 0);
+function findMaxAge(arr){
+    return arr.reduce((max, person) => person.age>max , 0);
 }
 
-function findAvg(arr){
+function findEvenageAvg(arr){
     let evenAges = arr.filter(person => person.age % 2 === 0);
-    return evenAges.reduce((person, tot)=> (person.age + tot)/evenAges.length, 0);
+    return evenAges.reduce((tot, person)=> person.age + tot, 0)/evenAges.length;
 }
 
-console.log(JSON.stringify(findEvenAge(peopleArray)));

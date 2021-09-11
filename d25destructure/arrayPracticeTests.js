@@ -71,22 +71,5 @@ describe("filter practice", function () {
 
 });
 
-describe("reduce practice", function () {
-    beforeEach(function () {
-        numArray = [5, 0, 7, 77, -20, 300, 51, 2];
-        peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
-    });
 
-    it("doubles an array of numbers", function () {
-        assert.deepEqual(doubleNums(numArray), [10, 0, 14, 154, -40, 600, 102, 4]);
-        assert.deepEqual(numArray, [5, 0, 7, 77, -20, 300, 51, 2]);  //test for pure function
-    });
-
-    it("doubles age", function () {
-        assert.deepEqual(doubleAges(peopleArray),
-            [{ name: "Sam", age: 30 }, { name: "William", age: 12 }, { name: "Lucy", age: 26 }, { name: "Barney", age: 160 }]);
-        assert.deepEqual(peopleArray,
-            [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }]);
-    });
-});
 
