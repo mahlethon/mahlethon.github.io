@@ -66,16 +66,6 @@ bart1.next = lisa1;
 homer1.next = bart1;
 abe1.next = homer1;
 
-//5. Given a target value in the list, return the node that contains the target value or null if no match.
-findListNode(list, target){
-    if(list.next == null){
-        return;
-    }else{
-        
-    }
-
-}
-
 
 /**
  * 9. Write code to illustrate the use of the rest operator
