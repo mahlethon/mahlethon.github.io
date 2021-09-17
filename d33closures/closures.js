@@ -1,7 +1,7 @@
 "use strict"
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
-//module.exports = {inArray, inBetween, byField, makeArmy }; //add all of your function names here that you need for the node mocha tests
+module.exports = {inArray, inBetween, byField, makeArmy }; //add all of your function names here that you need for the node mocha tests
 
 
 /**
@@ -52,7 +52,7 @@ function byField(fieldName){
     let shooters = [];
     for(let i = 0; i < 10; i++) {
       let shooter = function(){ 
-        alert( i ); 
+        console.log(i); 
       };
       shooters.push(shooter);
     }
@@ -63,5 +63,5 @@ function byField(fieldName){
 
   let army = makeArmy();
   
-  //army[0](); // the shooter number 0 shows 10
-  //army[5](); // and number 5 also outputs 10...
+  army[0](); // the shooter number 0 shows 10
+  army[5](); // and number 5 also outputs 10...
