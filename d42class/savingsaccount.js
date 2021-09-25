@@ -26,7 +26,7 @@ class SavingsAccount extends Account {
 
     getBalance(){
         this._balance = super.getBalance();
-        return this._balance;//._balance;
+        return this._balance;
     }
 
     addInterest(){
@@ -39,7 +39,7 @@ class SavingsAccount extends Account {
         return "SavingsAccount " + this._number + ": balance: " + super.getBalance() + " interest: "+this._interest;
     }
 
-    endOfMonth() {//Interest added SavingsAccount 1: balance: 105 interest: 5
+    endOfMonth() {
         super._balance = (super.getBalance()+this._interest);
         return "Interest added SavingsAccount " + this._number + ": balance: " + super.getBalance() + " interest: "+this._interest;
     }

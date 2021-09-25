@@ -22,6 +22,7 @@ class Bank {
     addAccount(){
         this._nextNumber += 1;
         this._accounts.push(new Account(this._nextNumber));
+        return  this._accounts.length;
     }
     
     addSavingsAccount(interest){
@@ -40,7 +41,7 @@ class Bank {
         this._accounts.splice((number-1), 1);
     }
 
-    accountReport(){//"SavingsAccount 2: balance: 0 interest: 2.5\nCheckingAccount 3: balance: 0 overdraft limit: 500\n"
+    accountReport(){
         let report = "";
 
         for (let value of this._accounts) {
@@ -50,7 +51,6 @@ class Bank {
         return report;
     }
 
-    // "Interest added SavingsAccount 2: balance: 102.5 interest: 2.5\nWarning, low balance CheckingAccount 3: balance: -100 overdraft limit: 500\n"
     endOfMonth(){
         let endReport = "";
         for (let value of this._accounts) {
