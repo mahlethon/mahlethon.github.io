@@ -1,0 +1,27 @@
+body{
+    
+    color: rgb(41,189,188); 
+    background-image: 
+    url(IMG_97642.jpeg);
+    
+   
+}
+.container{
+    background-color: rgba(245, 245, 245, 0.178);
+margin: auto;
+color: rgb(41,189,188); 
+   }
+   .manage{
+       border: 1px solid whitesmoke;
+       height: 100px;
+       margin: 50px;
+       padding: 40px;
+       border-top: 3px solid rgba(250, 128, 114, 0.568);
+       border-left: 3px solid rgba(250, 128, 114, 0.568);
+   }
+   .manage:hover{
+       background-color: rgba(255, 255, 255, 0.226);
+   }
+   #options{
+       margin: auto;
+   }
