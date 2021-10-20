@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./contacts.css">
+   
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+
+            <a style=" color: rgb(41,189,188)" href="./index.html">
+                <div class="menubar" id="home"><img img src="home.jpeg" width=80px></div>
+
+            </a>
+
+            <div></div>
+            <a href="./about.html">
+                <div class="menubar" id="about">About</div>
+            </a>
+
+            <a href="./courses.html">
+                <div class="menubar" id="courses">Courses</div>
+            </a>
+
+            <a href="./projects.html">
+                <div class="menubar" id="projects">Projects</div>
+            </a>
+
+            <a href="./skills.html">
+                <div class="menubar" id="skills">Skills</div>
+            </a>
+            <a href="./contacts.html">
+                <div class="menubar" id="contacts">Contact Me</div>
+            </a>
+
+        </div>
+        <div class="row">
+
+            <div class="col-xs-6" style=" margin-top: 20px;">
+
+
+                <p style="  font-size: 20px;">
+                    <b>I'd love to hear from you!</b>
+                    If you'd like to communicate with me, please go ahead and
+                    put your name and email address, and a brief subject
+                    (optional) in the fields below.
+                </p>
+
+                <form action="./submission.html" method="GET">
+                    <label for="name">Name</label><br>
+                    <input name="name" id="guestname" type="text" placeholder="your name " required><br><br>
+                    <label for="email">Email</label><br>
+                    <input name="email" id="email" type="email" placeholder="your email " required><br><br>
+
+                    <textarea name="subject" id="subject" placeholder="a brief subject..."></textarea><br><br>
+
+                   <input id="submit" type="submit" value="Submit"><br>
+
+                </form>
+
+
+            </div>
+            <div class="col-xs-6">
+                <form id="info">
+                    <b>Email </b> mhonelign@miu.edu<br>
+                    <b>Phone</b> +1(515)-229-0430<br>
+                    <b>Address<br></b> Fairfield, Iowa<br>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+   <script>
+ 
+</script>
+
+
+
+</body>
+
+</html>

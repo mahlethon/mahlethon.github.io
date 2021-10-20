@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="row">
+            
+        <a  href="./index.html" >
+            <div class="menubar" id="home"><img  src="home.jpeg" width=80px></div>
+    
+        </a>
+    
+        
+    </div>
+
+<div class="container">
+    <div class="row">Welcome to the Adminstrative Dashboard</div>
+    <div class="row"><br></div>
+    <div class="row"><b class="title"> Manage Courses</b></div>
+    <div class="row"><br></div>
+    <div class="row">
+       
+         Add Course
+        <form>
+        <input type="text" id="addcid" placeholder="Course Id">
+        <input type="text" id="addcname" placeholder="Course Name">
+        <input type="text" id="addcdate" placeholder="Course Date">
+
+         <input type="button" id="addCourse" value="Add ">
+
+        </form>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+       
+        Delete Course<br>
+                <form>
+                <input type="text" id="deletecid" placeholder="Course Id">
+                <input type="text" id="deletecname" placeholder="Course Name">
+                
+        
+                 <input type="button" id="deleteCourse" value="Delete ">
+                </form>
+            
+      </div>
+      <div class="row"><br></div>
+    <div class="row" > <b class="title"> Manage Projects</b></div>
+    <div class="row"><br></div>
+    <div class="row">
+       
+         Add Project
+        <form>
+       
+        <input type="text" id="addpname" placeholder="Project Name">
+        <input type="text" id="addpid" placeholder="Difficulty Level">
+        <input type="text" id="addpdate" placeholder="Date">
+
+         <input type="button" id="addProject" value="Add ">
+        </form>
+    
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+       
+         Delete Projects
+                <form>
+               
+                <input type="text" id="deletepname" placeholder="Project Name">
+               
+        
+                 <input type="button" id="deleteProject" value="Delete">
+                </form>
+            
+      </div>
+      <div class="row"><br></div>
+      <div class="row" > <b class="title"> Contact Requests</b></div>
+      <div class="row" > <input type="button" id="dislay" value="Display Contact Requests"></div>
+      <div class="row"><br></div>
+      
+      <div id = "contactRequests"></div>
+      
+      
+    
+</div>
+
+</body>
+
+</html>
